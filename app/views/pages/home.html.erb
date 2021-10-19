@@ -1,1 +1,9 @@
-<h1>Hello there</h1>
+<div class="container mt-3">
+  <h1>Hello there</h1>
+  <%= simple_form_for :user, url: root_path do |f| %>
+    <%= f.input :name, as: :string, required: false %>
+    <%= f.input :age, as: :string, required: false %>
+    <%= f.input :address, as: :string, placeholder:'test', required: false %>
+    <%= f.submit 'hello', class: 'btn btn-primary' %>
+  <% end %>
+</div>
